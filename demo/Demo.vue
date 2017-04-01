@@ -1,11 +1,11 @@
 <template>
   <main>
-    <chart id="logo" :options="logo" auto-resize></chart>
+    <chart id="logo" :options="logo" resizable></chart>
     <h1><a href="https://github.com/Justineo/vue-echarts">Vue-ECharts</a></h1>
     <p class="desc">ECharts component for Vue.js.</p>
 
     <h2>Bar chart <small>(with async data &amp; custom theme)</small></h2>
-    <figure><chart :options="bar" ref="bar" theme="ovilia-green" auto-resize></chart></figure>
+    <figure><chart :options="bar" ref="bar" theme="ovilia-green" resizable></chart></figure>
     <template v-if="seconds < 0">
       <p><button @click="load">Load</button></p>
     </template>
@@ -15,20 +15,20 @@
     </template>
 
     <h2>Pie chart <small>(with action dispatch)</small></h2>
-    <figure><chart :options="pie" ref="pie" auto-resize></chart></figure>
+    <figure><chart :options="pie" ref="pie" resizable></chart></figure>
 
     <h2>Polar plot <small>(with built-in theme)</small></h2>
-    <figure style="background-color: #333;"><chart :options="polar" theme="dark" auto-resize></chart></figure>
+    <figure style="background-color: #333;"><chart :options="polar" theme="dark" resizable></chart></figure>
 
     <h2>Scatter plot <small>(with gradient)</small></h2>
-    <figure><chart id="scatter" :options="scatter" auto-resize></chart></figure>
+    <figure><chart id="scatter" :options="scatter" resizable></chart></figure>
 
     <h2>Map <small>(with GeoJSON &amp; image converter)</small></h2>
-    <figure style="background-color: #404a59;"><chart id="map" :options="map" ref="map" auto-resize></chart></figure>
+    <figure style="background-color: #404a59;"><chart id="map" :options="map" ref="map" resizable></chart></figure>
     <p><button @click="convert">Convert to image</button></p>
 
     <h2>Radar chart <small>(with Vuex integration)</small></h2>
-    <figure><chart :options="scoreRadar" auto-resize></chart></figure>
+    <figure><chart :options="scoreRadar" resizable></chart></figure>
     <p>
       <select v-model="metricIndex">
         <option v-for="(metric, index) in metrics" :value="index">{{metric}}</option>
@@ -39,8 +39,8 @@
     </p>
 
     <h2>Connectable charts</h2>
-    <figure class="half"><chart :options="c1" group="radiance" ref="c1" auto-resize></chart></figure>
-    <figure class="half"><chart :options="c2" group="radiance" ref="c2" auto-resize></chart></figure>
+    <figure class="half"><chart :options="c1" group="radiance" ref="c1" resizable></chart></figure>
+    <figure class="half"><chart :options="c2" group="radiance" ref="c2" resizable></chart></figure>
     <p>
       <input id="connect" type="checkbox" v-model="connected"><label for="connect"> Connected</label>
     </p>

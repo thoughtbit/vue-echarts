@@ -1,3 +1,6 @@
+3.0.0
+* Add support component resize event auto update view;
+
 2.3.3
 * Fix NPM package.
 

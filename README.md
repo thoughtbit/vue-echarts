@@ -14,7 +14,7 @@ Just download `dist/vue-echarts.js` and include it in your HTML file:
 <script src="path/to/vue-echarts/dist/vue-echarts.js"></script>
 ```
 
-### npm 
+### npm
 
 ```bash
 $ npm install vue-echarts
@@ -100,7 +100,8 @@ require.config({
 
 require(['vue', 'vue-echarts'], function (Vue, ECharts) {
   // register component to use...
-  Vue.component('chart', ECharts)
+  // Vue.component('chart', ECharts)
+  Vue.use(ECharts);
 })
 ```
 
@@ -110,7 +111,8 @@ The component class is exposed as `window.VueECharts`.
 
 ```js
 // register component to use
-Vue.component('chart', VueECharts)
+// Vue.component('chart', VueECharts)
+  Vue.use(VueECharts);
 ```
 
 ## Using the component
@@ -194,9 +196,10 @@ See more examples [here](https://github.com/Justineo/vue-echarts/tree/master/dem
 
   This property is automatically bound to the same property of the ECharts instance.
 
-* `auto-resize`
+* `resizable`
 
   This property indicates ECharts instance should be resized automatically whenever the window is resized.
+
 
 ### Instance Methods
 
